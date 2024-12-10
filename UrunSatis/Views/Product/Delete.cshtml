@@ -1,0 +1,16 @@
+﻿namespace UrunSatis.Views.Product
+{
+    public class Delete
+    {
+        @model UrunSatis.Models.Product
+
+<h1>Ürün Sil</h1>
+<p><strong>@Model.Name</strong> adlı ürünü silmek istediğinize emin misiniz?</p>
+<form asp-action="DeleteConfirmed" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Evet, Sil</button>
+    <a asp-action="Index" class="btn btn-secondary">Hayır, Geri Dön</a>
+</form>
+
+    }
+}
